@@ -75,8 +75,7 @@ The counter is capable of counting in both:
 - FPGA/ASIC Learning Projects
 
 ---
-
 ## 👨‍💻 Author
-
+Durgesh Dongre-
 Designed and implemented as part of Digital IC Design and Verilog HDL practice.
-"""
+

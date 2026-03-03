@@ -12,20 +12,19 @@ assign k1 = ud ? q0 : (!q0);
 assign j0 = 1'b1;
 assign k0 = 1'b1;
 always @(posedge clk)
-    begin
-       if(rst)
-          begin q2<= 1'b0; q1<= 1'b0; q0<= 1'b0; end
-       else if(ud)
-          begin
-                q2 <= (j2 && (!q2)) || ( (!k2) && q2);
-                q1 <= (j1 && (!q1)) || ( (!k1) && q1);
-                q0 <= (j0 && (!q0)) || ( (!k0) && q0);
-          end
-        else 
-          begin
-                q2 <= (j2 && (!q2)) || ( (!k2) && q2);
-                q1 <= (j1 && (!q1)) || ( (!k1) && q1);
-                q0 <= (j0 && (!q0)) || ( (!k0) && q0);
-          end
-    end
+begin
+   if (rst)
+   begin
+      q2 <= 1'b0;
+      q1 <= 1'b0;
+      q0 <= 1'b0;
+   end
+   else
+   begin
+      q2 <= (j2 && (!q2)) || ((!k2) && q2);
+      q1 <= (j1 && (!q1)) || ((!k1) && q1);
+      q0 <= (j0 && (!q0)) || ((!k0) && q0);
+   end
+end
 endmodule
+
